@@ -1,0 +1,136 @@
+<!Doctype html>
+<html>
+<head>
+ </script>
+
+    <style type="text/css">
+
+               .square {
+
+            width: 130px;
+
+            height: 130px;
+
+            border-radius: 0%;
+
+            float: left;
+
+            margin-right: 50px;
+
+        }        
+
+
+        #square {
+
+            background-color: #58D68D;
+
+        }
+
+    </style>
+
+</head>
+ 
+
+<body>
+ 
+
+    
+    <div class="square" id="square"></div>
+ 
+
+    <script type="text/javascript">
+
+      
+
+        document.getElementById("square").onclick = function() {
+
+            document.getElementById("square").style.display = "none";
+
+        }
+
+    </script>
+
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can show hidden HTML elements.</p>
+
+<p id="demo" style="display:none">Hello JavaScript!</p>
+
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button>
+
+
+
+<h2>JavaScript HTML DOM</h2>
+<p>Add a new HTML Element.</p>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+const para = document.createElement("p");
+const node = document.createTextNode("This is new.");
+para.appendChild(node);
+const element = document.getElementById("div1");
+element.appendChild(para);
+</script>
+
+
+<h1>The Element Object</h1>
+<h2>The remove() Method</h2>
+
+<p id="demo">Click "Remove", and this paragraph will be removed from the DOM.</p>
+<button onclick="myFunction()">Remove</button>
+
+<script>
+function myFunction() {
+  const element = document.getElementById("demo");
+  element.remove();
+}
+</script>
+
+<style>
+.democlass {
+  color: red;
+}
+<h1 id="myH1">The Element Object</h1>
+<h2>The setAttribute() Method</h2>
+
+<p>Click "Add Class" to add a class attribute to the h1 element:</p>
+
+<button onclick="myFunction()">Add Class</button>
+
+<script>
+function myFunction() {
+  document.getElementById("myH1").setAttribute("class", "democlass"); 
+}
+</script>
+
+Name: <input type="text" id="myText" value="Mickey">
+
+<p>Click the button to change the value of the text field.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("myText").value = "Jayasree";
+}
+</script>
+
+<h2>JavaScript HTML DOM</h2>
+<p>Changing the HTML style:</p>
+
+
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+
+<script>
+document.getElementById("p2").style.color = "blue";
+document.getElementById("p2").style.fontFamily = "Arial";
+document.getElementById("p2").style.fontSize = "larger";
+</script>
+</script>
+</html>
